@@ -1,0 +1,15 @@
+drop table admins;
+drop table cari;
+drop table firma;
+drop table garson;
+drop table kasa;
+drop table kategori;
+drop table kesinti;
+drop table kesinti_all;
+drop table marka;
+drop table masa;
+drop table odeme;
+drop table puantaj;
+drop table stok;
+drop table stok_ihtiyac;
+drop table urun;

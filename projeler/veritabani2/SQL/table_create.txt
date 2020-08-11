@@ -1,0 +1,90 @@
+CREATE TABLE mal (
+    mal_id SERIAL PRIMARY KEY,
+    mal_ad VARCHAR(20)
+);
+/*1*/
+CREATE TABLE kategori (
+    kat_id SERIAL PRIMARY KEY,
+    kat_ad VARCHAR(20)
+);
+/*2*/
+CREATE TABLE kargo_takip (
+    takip_id SERIAL PRIMARY KEY,
+    kargo_id int,
+	takip_nerede VARCHAR(20)
+);
+/*3*/
+CREATE TABLE kargo (
+    kargo_id SERIAL PRIMARY KEY,
+    kargo_ad VARCHAR(20),
+	katag_id int,
+	mal_id int,
+	kargo_sahip VARCHAR(20),
+	kargo_teslim int
+);
+/*4*/
+CREATE TABLE kargo_barkod (
+    barkod_id SERIAL PRIMARY KEY,
+    kargo_id int,
+	barkod int
+);
+/*5*/
+CREATE TABLE kargo_alim (
+    alim_id SERIAL PRIMARY KEY,
+    alim_adres varchar(20)
+);
+/*6*/
+CREATE TABLE admins (
+    admin_id SERIAL PRIMARY KEY,
+    admin_kad varchar(20),
+	admin_password varchar(500),
+	admin_updated_at timestamp
+);
+/*7*/
+CREATE TABLE puantaj (
+    puan_id SERIAL PRIMARY KEY,
+    cal_id int,
+	gun int
+);
+/*8*/
+CREATE TABLE calisan (
+    calisan_id SERIAL PRIMARY KEY,
+	calisan_ad varchar(20),
+	calısan_nerede varchar(50)
+);
+/*9*/
+CREATE TABLE stok (
+   	stok_id SERIAL PRIMARY KEY,
+    stok_miktar int
+);
+/*10*/
+CREATE TABLE cari (
+    cari_id SERIAL PRIMARY KEY,
+	cari_day date,
+	toplam decimal
+);
+/*11*/
+
+CREATE TABLE kargo_iade (
+    kargo_iade_id SERIAL PRIMARY KEY,
+	kargo_id int,
+	kargo_iade_neden varchar(50)
+);
+/*12*/
+CREATE TABLE kargo_durum (
+    kargo_durum_id SERIAL PRIMARY KEY,
+	kargo_durum_ad varchar(20)
+);
+/*13*/
+CREATE TABLE odemefirma (
+    odeme_id SERIAL PRIMARY KEY,
+	firma_idsi int,
+	odeme_miktar decimal
+);
+/*14*/
+CREATE TABLE firmalar (
+    firma_id SERIAL PRIMARY KEY,
+	firma_adi varchar(100),
+	firma_adresi varchar(200)
+);
+/*15*/

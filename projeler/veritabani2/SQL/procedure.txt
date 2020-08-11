@@ -1,0 +1,13 @@
+CREATE OR REPLACE PROCEDURE public.kargo()
+LANGUAGE 'sql'
+AS $BODY$select * FROM kargo$BODY$;
+
+CREATE OR REPLACE PROCEDURE public.cari()
+LANGUAGE 'sql'
+AS $BODY$select * FROM cari$BODY$;
+CREATE OR REPLACE PROCEDURE public.kargo_durum()
+LANGUAGE 'sql'
+AS $BODY$select * FROM kargo_durum$BODY$;
+CREATE OR REPLACE PROCEDURE public.firma()
+LANGUAGE 'sql'
+AS $BODY$select * FROM firma$BODY$;
